@@ -1,0 +1,13 @@
+generate_data.py 用于生成数据，源文件内可以设置生成的图片的个数，接收两个命令行参数，第一个是保留图片原文件的比例，(默认1.0，对于训练集建议设置的很小，不要输出太多图片看着难受），第二个参数是输出文件夹
+
+OCR.py 接收一个命令行参数，是要预测的图片文件名，用于测试单张图片
+
+OCRCommon.py 里面是一些程序的通用常数设置
+
+OCRTest.py 使用test_data文件夹下的测试数据，输出测试集上的accuracy
+
+OCRTrain.py 使用validation_code_2文件夹下的80000张训练数据训练神经网络
+
+VC4OCRNet.py 神经网络模型
+
+VC4OCRNet.h5 OCRTrain.py训练完成后保存的神经网络参数文件。OCRTest.py OCR.py都需要加载它来使用这个神经网络。
